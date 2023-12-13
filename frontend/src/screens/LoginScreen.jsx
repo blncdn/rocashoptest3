@@ -50,7 +50,7 @@ const LoginScreen = () => {
           <Form.Label>Email Addresse</Form.Label>
           <Form.Control
             type='email'
-            placeholder='Enter email'
+            placeholder='email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></Form.Control>
@@ -60,13 +60,13 @@ const LoginScreen = () => {
           <Form.Label>Password</Form.Label>
           <Form.Control
             type='password'
-            placeholder='Enter password'
+            placeholder='password'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
-        <Button disabled={isLoading} type='submit' variant='primary'>
+        <Button disabled={isLoading} type='Einlogen' variant='primary'>
           Login
         </Button>
 
@@ -75,7 +75,7 @@ const LoginScreen = () => {
 
       <Row className='py-3'>
         <Col>
-          Sind Sie neu?{' '}
+          Neu hier?{' '}
           <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>
             Registrieren
           </Link>
@@ -86,3 +86,4 @@ const LoginScreen = () => {
 };
 
 export default LoginScreen;
+
