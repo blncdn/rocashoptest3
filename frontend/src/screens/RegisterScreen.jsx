@@ -56,7 +56,7 @@ const RegisterScreen = () => {
           <Form.Label>Name</Form.Label>
           <Form.Control
             type='name'
-            placeholder='Enter name'
+            placeholder='name'
             value={name}
             onChange={(e) => setName(e.target.value)}
           ></Form.Control>
@@ -66,7 +66,7 @@ const RegisterScreen = () => {
           <Form.Label>Email Adresse</Form.Label>
           <Form.Control
             type='email'
-            placeholder='Enter email'
+            placeholder='email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></Form.Control>
@@ -76,7 +76,7 @@ const RegisterScreen = () => {
           <Form.Label>Password</Form.Label>
           <Form.Control
             type='password'
-            placeholder='Enter password'
+            placeholder='password'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
@@ -85,7 +85,7 @@ const RegisterScreen = () => {
           <Form.Label>Wiederhole Password</Form.Label>
           <Form.Control
             type='password'
-            placeholder='Confirm password'
+            placeholder='password'
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           ></Form.Control>
@@ -100,9 +100,9 @@ const RegisterScreen = () => {
 
       <Row className='py-3'>
         <Col>
-          Bereits registriert?{' '}
+          Schon da gewesen?{' '}
           <Link to={redirect ? `/login?redirect=${redirect}` : '/login'}>
-            Login
+            Anmelden
           </Link>
         </Col>
       </Row>
@@ -111,3 +111,4 @@ const RegisterScreen = () => {
 };
 
 export default RegisterScreen;
+
