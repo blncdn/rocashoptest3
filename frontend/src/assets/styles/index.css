@@ -1,6 +1,9 @@
 main {
   min-height: 80vh;
+  background: black;
+  background-color: #000000;
 }
+
 
 .rating span {
   margin: 0.1rem;
@@ -53,8 +56,12 @@ table th {
 }
 
 .nav-link{
-color: #000000;
+color: #ffffff;
 }
 .navbar-brand {
-  color: #000000;
+  color: #ffffff;
+}
+.navbar{
+  background-color: #000000;
+  background: #000000;
 }
