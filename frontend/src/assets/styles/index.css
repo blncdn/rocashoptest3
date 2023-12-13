@@ -90,10 +90,12 @@ navbar-toggler {
 .card{
   background-color: #cfcfcf;
 }
-
 label.form-label{
   color: #ffffff;
 }
 h1{
   color: #ffffff;
+}
+.carousel{
+  margin-top: 21px;
 }
