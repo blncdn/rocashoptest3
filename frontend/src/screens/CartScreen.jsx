@@ -104,7 +104,7 @@ const CartScreen = () => {
                 disabled={cartItems.length === 0}
                 onClick={checkoutHandler}
               >
-                Weiter zum bezahlen
+                 Zur Kasse 
               </Button>
             </ListGroup.Item>
           </ListGroup>
