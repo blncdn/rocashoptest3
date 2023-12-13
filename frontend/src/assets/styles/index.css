@@ -99,3 +99,9 @@ h1{
 .carousel{
   margin-top: 21px;
 }
+
+.list-group-item{
+  color: #ffffff;
+  background-color: #000000;
+  background: #000000;
+}
