@@ -69,6 +69,10 @@ color: #ffffff;
   z-index: 10;
   width: 100%;
 }
+.dropdown-menu.show{
+  background-color: #000000;
+  color: #ffffff;
+}
 
 footer {
   background: #000000;
