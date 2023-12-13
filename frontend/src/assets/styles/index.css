@@ -2,8 +2,8 @@ main {
   min-height: 80vh;
   background: black;
   background-color: #000000;
+  margin-top: 65px;
 }
-
 
 .rating span {
   margin: 0.1rem;
@@ -37,9 +37,9 @@ table th {
 
 .review h2 {
   font-size: 24px;
-  background: #020202;
+  background: #d1cfcf;
   padding: 10px;
-  border: 1px solid #000000;
+  border: 1px solid #ffffff;
 }
 
 .review button {
@@ -64,6 +64,10 @@ color: #ffffff;
 .navbar{
   background-color: #000000;
   background: #000000;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
 }
 
 footer {
@@ -78,4 +82,7 @@ p{
 navbar-toggler {
   color: #ffffff;
   
+}
+.card{
+  background-color: #cfcfcf;
 }
