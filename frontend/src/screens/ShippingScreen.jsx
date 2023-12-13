@@ -32,10 +32,10 @@ const ShippingScreen = () => {
       <h1>Versand</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group className='my-2' controlId='address'>
-          <Form.Label>Adresse/Hausnummer</Form.Label>
+          <Form.Label>Strasse/Hausnummer</Form.Label>
           <Form.Control
             type='text'
-            placeholder='Enter address'
+            placeholder='Adresse'
             value={address}
             required
             onChange={(e) => setAddress(e.target.value)}
@@ -46,7 +46,7 @@ const ShippingScreen = () => {
           <Form.Label>Stadt</Form.Label>
           <Form.Control
             type='text'
-            placeholder='Enter city'
+            placeholder='Stadt'
             value={city}
             required
             onChange={(e) => setCity(e.target.value)}
@@ -54,10 +54,10 @@ const ShippingScreen = () => {
         </Form.Group>
 
         <Form.Group className='my-2' controlId='postalCode'>
-          <Form.Label>PLZ</Form.Label>
+          <Form.Label>Postleitzahl</Form.Label>
           <Form.Control
             type='text'
-            placeholder='Enter postal code'
+            placeholder='PLZ'
             value={postalCode}
             required
             onChange={(e) => setPostalCode(e.target.value)}
@@ -68,7 +68,7 @@ const ShippingScreen = () => {
           <Form.Label>Land</Form.Label>
           <Form.Control
             type='text'
-            placeholder='Enter country'
+            placeholder='Land'
             value={country}
             required
             onChange={(e) => setCountry(e.target.value)}
@@ -76,7 +76,7 @@ const ShippingScreen = () => {
         </Form.Group>
 
         <Button type='submit' variant='primary'>
-          Weiter mit Bestellung
+          Weiter
         </Button>
       </Form>
     </FormContainer>
