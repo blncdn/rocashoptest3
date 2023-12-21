@@ -185,11 +185,11 @@ const OrderScreen = () => {
           <Card>
             <ListGroup variant='flush'>
               <ListGroup.Item>
-                <h2>Gesamte Summe</h2>
+                <h2>Gesamt</h2>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Produkte</Col>
+                  <Col>Artikel</Col>
                   <Col>€{order.itemsPrice}</Col>
                 </Row>
               </ListGroup.Item>
@@ -207,7 +207,7 @@ const OrderScreen = () => {
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Gesamt</Col>
+                  <Col>Gesamte Summe</Col>
                   <Col>€{order.totalPrice}</Col>
                 </Row>
               </ListGroup.Item>
