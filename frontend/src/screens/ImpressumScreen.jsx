@@ -9,7 +9,7 @@ const ImpressumScreen = () => {
 
     <Container class="impressum">
     <Row>  
-      <Col class="impressum" className='text-center py-3'>
+      <Col id="impressumText" className='text-center py-3'>
         <h4>
             IMPRESSUM
             
