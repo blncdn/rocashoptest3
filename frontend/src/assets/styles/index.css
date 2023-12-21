@@ -77,6 +77,11 @@ color: #ffffff;
 footer {
   background: #000000;
 }
+.instLink{
+  text-align: center;
+  padding-top: 12px;
+
+}
 p{
   color: #ffffff;
 }
