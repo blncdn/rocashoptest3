@@ -1,5 +1,6 @@
 import { Navbar, Nav, Container, NavDropdown, Badge } from 'react-bootstrap';
 import { FaShoppingCart, FaUser } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
 import { LinkContainer } from 'react-router-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -37,10 +38,10 @@ const Header = () => {
         <Container>
           <LinkContainer to='/'>
             <Navbar.Brand>
-    
               ROCA ROCANA
             </Navbar.Brand>
           </LinkContainer>
+          <a class="NavInsta" href="http://instagram.com/rocarokana"Instagram><FaInstagram size=""/> </a>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ms-auto'>
