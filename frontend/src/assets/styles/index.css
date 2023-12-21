@@ -9,13 +9,12 @@ main {
 @media only screen and (max-width: 991px) {
 
 a.NavInsta{
-display: block;
-position: absolute;
-margin-left: 150px;
-}
+  text-align: center;
+  padding: 0;
+  margin: 0;
 
 }
-
+}
 
 
 .rating span {
@@ -121,6 +120,13 @@ h1{
 
 ul.instLink{
   text-align: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.RowInsta{
+  text-align: center;
+  align-items: center;
   padding: 0;
   margin: 0;
 }
