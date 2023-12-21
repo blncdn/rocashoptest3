@@ -89,8 +89,8 @@ const CartScreen = () => {
           <ListGroup variant='flush'>
             <ListGroup.Item>
               <h2>
-                Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
-                items
+                Insgesamt ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
+                Artikel
               </h2>
               €
               {cartItems
