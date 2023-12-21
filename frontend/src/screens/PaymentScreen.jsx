@@ -38,7 +38,7 @@ const PaymentScreen = () => {
             <Form.Check
               className='my-2'
               type='radio'
-              label='PayPal or Credit Card'
+              label='PayPal oder Kredit/Debit Karte'
               id='PayPal'
               name='paymentMethod'
               value='PayPal'
@@ -49,7 +49,7 @@ const PaymentScreen = () => {
         </Form.Group>
 
         <Button type='submit' variant='primary'>
-          Continue
+          Weiter
         </Button>
       </Form>
     </FormContainer>
