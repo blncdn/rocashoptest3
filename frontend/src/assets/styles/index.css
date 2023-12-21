@@ -5,6 +5,19 @@ main {
   margin-top: 65px;
 }
 
+
+@media only screen and (max-width: 991px) {
+
+a.NavInsta{
+display: block;
+position: absolute;
+margin-left: 150px;
+}
+
+}
+
+
+
 .rating span {
   margin: 0.1rem;
 }
@@ -77,11 +90,6 @@ color: #ffffff;
 footer {
   background: #000000;
 }
-.instLink{
-  text-align: center;
-  padding-top: 12px;
-
-}
 p{
   color: #ffffff;
 }
@@ -109,4 +117,15 @@ h1{
   color: #ffffff;
   background-color: #000000;
   background: #000000;
+}
+
+ul.instLink{
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+div.row{
+  color: #ffffff;
+  padding-top: 30px;
 }
