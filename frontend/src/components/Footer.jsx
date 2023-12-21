@@ -6,9 +6,12 @@ const Footer = () => {
   return (
     <footer>
       <Container>
-        <Row>
-          <ul class="instLink"><a href="http://instagram.com/rocarokana">Instagram</a></ul>
+        <Row>  
           <Col className='text-center py-3'>
+            <ul class="instLink">
+              <a href="/impressum">Impressum
+              </a>
+            </ul> 
             <p>ROCA &copy; {currentYear}</p>
           </Col>
         </Row>
