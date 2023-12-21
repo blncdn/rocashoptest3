@@ -53,39 +53,39 @@ const RegisterScreen = () => {
       <h1>Registrieren</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group className='my-2' controlId='name'>
-          <Form.Label>Name</Form.Label>
+          <Form.Label>Name und Nachname</Form.Label>
           <Form.Control
             type='name'
-            placeholder='name'
+            placeholder='Geben Sie Ihr Name ein'
             value={name}
             onChange={(e) => setName(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Form.Group className='my-2' controlId='email'>
-          <Form.Label>Email Adresse</Form.Label>
+          <Form.Label>E-Mail Adresse</Form.Label>
           <Form.Control
             type='email'
-            placeholder='email'
+            placeholder='Geben Sie Ihr E-mail ein'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Form.Group className='my-2' controlId='password'>
-          <Form.Label>Password</Form.Label>
+          <Form.Label>Passwort</Form.Label>
           <Form.Control
             type='password'
-            placeholder='password'
+            placeholder='Geben Sie Ihr Passwort ein'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
         <Form.Group className='my-2' controlId='confirmPassword'>
-          <Form.Label>Wiederhole Password</Form.Label>
+          <Form.Label>Wiederholen Sie Ihr Passwort</Form.Label>
           <Form.Control
             type='password'
-            placeholder='password'
+            placeholder='Geben Sie Ihr Passwort nochmal ein'
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           ></Form.Control>
@@ -100,7 +100,7 @@ const RegisterScreen = () => {
 
       <Row className='py-3'>
         <Col>
-          Schon da gewesen?{' '}
+          Bereits Registriert?{' '}
           <Link to={redirect ? `/login?redirect=${redirect}` : '/login'}>
             Anmelden
           </Link>
