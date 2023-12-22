@@ -47,10 +47,10 @@ const LoginScreen = () => {
 
       <Form onSubmit={submitHandler}>
         <Form.Group className='my-2' controlId='email'>
-          <Form.Label>Email</Form.Label>
+          <Form.Label>E-Mail</Form.Label>
           <Form.Control
             type='email'
-            placeholder='email'
+            placeholder='Ihre E-Mail eingeben'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></Form.Control>
@@ -60,7 +60,7 @@ const LoginScreen = () => {
           <Form.Label>Password</Form.Label>
           <Form.Control
             type='password'
-            placeholder='password'
+            placeholder='Ihr Passwort eingeben'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
