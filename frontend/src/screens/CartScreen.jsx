@@ -53,7 +53,11 @@ const CartScreen = () => {
                   <Col md={3}>
                     <Link to={`/product/${item._id}`}>{item.name}</Link>
                   </Col>
+                  <br></br>
+  
                   <Col md={2}>${item.price}</Col>
+                  <br></br>
+                  <br></br>
                   <Col md={2}>
                     <Form.Control
                       as='select'
@@ -69,6 +73,9 @@ const CartScreen = () => {
                       ))}
                     </Form.Control>
                   </Col>
+                  <br></br>
+                  <br></br>
+                  <br></br>
                   <Col md={2}>
                     <Button
                       type='button'
@@ -89,8 +96,8 @@ const CartScreen = () => {
           <ListGroup variant='flush'>
             <ListGroup.Item>
               <h2>
-                Insgesamt ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
-                Artikel
+                Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
+                items
               </h2>
               €
               {cartItems
