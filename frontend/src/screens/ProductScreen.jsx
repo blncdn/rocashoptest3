@@ -89,6 +89,9 @@ const ProductScreen = () => {
        <Carousel.Item key={product._id}>         
          <Image src={product.image[1]} alt={product.name} fluid /> 
        </Carousel.Item>
+              <Carousel.Item key={product._id}>         
+         <Image src={product.image[2]} alt={product.name} fluid /> 
+       </Carousel.Item>
             </Carousel>
 
 
