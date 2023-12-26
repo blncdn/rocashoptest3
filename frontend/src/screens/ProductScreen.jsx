@@ -10,6 +10,7 @@ import {
   Card,
   Button,
   Form,
+  Carousel
 } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import {
@@ -21,7 +22,7 @@ import Loader from '../components/Loader';
 import Message from '../components/Message';
 import Meta from '../components/Meta';
 import { addToCart } from '../slices/cartSlice';
-
+import { useGetTopProductsQuery } from '../slices/productsApiSlice';
 const ProductScreen = () => {
   const { id: productId } = useParams();
 
@@ -64,12 +65,12 @@ const ProductScreen = () => {
       toast.error(err?.data?.message || err.error);
     }
   };
-
+  const { data: products} = useGetTopProductsQuery();
   return (
     <>
-      <Link className='btn btn-light my-3' to='/'>
+      {/* <Link className='btn btn-light my-3' to='/'>
         Zurück
-      </Link>
+      </Link> */}
       {isLoading ? (
         <Loader />
       ) : error ? (
@@ -80,9 +81,17 @@ const ProductScreen = () => {
         <>
           <Meta title={product.name} description={product.description} />
           <Row>
-            <Col md={6}>
-              <Image src={product.image} alt={product.name} fluid />
-            </Col>
+            
+            <Carousel class="PCarousel" pause='hover' className='bg-primary mb-4'>           
+              <Carousel.Item key={product._id}>         
+                <Image src={product.image[0]} alt={product.name} fluid />         
+              </Carousel.Item>
+       <Carousel.Item key={product._id}>         
+         <Image src={product.image[1]} alt={product.name} fluid /> 
+       </Carousel.Item>
+            </Carousel>
+
+
             <Col md={3}>
               <ListGroup variant='flush'>
                 <ListGroup.Item>
@@ -115,7 +124,8 @@ const ProductScreen = () => {
                     <Row>
                       <Col>Status:</Col>
                       <Col>
-                        {product.countInStock > 0 ? 'Verfügbar' : 'Ausverkauft'}
+                        {product.countInStock > 0 ? 'Verfügbar ' : 'Ausverkauft'}
+                      
                       </Col>
                     </Row>
                   </ListGroup.Item>
