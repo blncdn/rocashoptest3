@@ -82,7 +82,7 @@ const ProductScreen = () => {
           <Meta title={product.name} description={product.description} />
           <Row>
             
-            <Carousel class="PCarousel" pause='hover' className='bg-primary mb-4'>           
+            <Carousel interval={null} class="PCarousel" pause='hover' className='bg-primary mb-4'>           
               <Carousel.Item key={product._id}>         
                 <Image src={product.image[0]} alt={product.name} fluid />         
               </Carousel.Item>
