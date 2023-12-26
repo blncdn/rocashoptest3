@@ -121,13 +121,26 @@ const ProductEditScreen = () => {
               <Form.Control
                 type='text'
                 placeholder='Enter image url'
-                value={image}
+                value={image[0]}
                 onChange={(e) => setImage(e.target.value)}
-              ></Form.Control>
+              ></Form.Control>     
+               <Form.Control
+                type='text'
+                placeholder='Enter image url'
+                value={image[1]}
+                onChange={(e) => setImage(e.target.value)}
+              ></Form.Control> 
+              <Form.Control
+                type='text'
+                placeholder='Enter image url'
+                value={image[2]}
+                onChange={(e) => setImage(e.target.value)}
+              ></Form.Control>     
               <Form.Control
                 label='Choose File'
                 onChange={uploadFileHandler}
                 type='file'
+                multiple       
               ></Form.Control>
               {loadingUpload && <Loader />}
             </Form.Group>
