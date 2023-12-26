@@ -170,7 +170,7 @@ const ProductScreen = () => {
           </Row>
           <Row className='review'>
             <Col md={6}>
-              <h2>Bewertung</h2>
+              <h2  style={{color:'white',background:'black', border:'none'}}>Bewertung</h2>
               {product.reviews.length === 0 && <Message>Keine Bewertung</Message>}
               <ListGroup variant='flush'>
                 {product.reviews.map((review) => (
@@ -181,8 +181,8 @@ const ProductScreen = () => {
                     <p>{review.comment}</p>
                   </ListGroup.Item>
                 ))}
-                <ListGroup.Item>
-                  <h2>Schreibe eine Bewertung</h2>
+                <ListGroup.Item style={{background:'black'}}>
+                  <h4 style={{color:'white',background:'black', border:'none'}}>Schreibe eine Bewertung</h4>
 
                   {loadingProductReview && <Loader />}
 
