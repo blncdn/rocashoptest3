@@ -8,24 +8,58 @@ main {
 
 @media only screen and (max-width: 991px) {
 
+.PCarousel{
+  width: 100%;
+}
+  .bg-primary {
+    --bs-bg-opacity: 0;
+.KItem{
+  width: 100%;
+  background-color: #000000;
+}
+}
 a.NavInsta{
   text-align: center;
   padding: 0;
   margin: 0;
-  .bg-primary {
-    --bs-bg-opacity: 0;
+
+}
+
+}
+
+
+@media only screen and (min-width: 991px) {
+  .PCarousel{
+    width: 50%;
+  }
+
+    .bg-primary {
+      --bs-bg-opacity: 0;
+  .KItem{
+    width: 100%;
+    background-color: #000000;
+  }
+  }
+  a.NavInsta{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  
+  }
+  
+  }
+
+
+
+
+.bg-primary {
+  --bs-bg-opacity: 0;
+
 .KItem{
-  width: 100%;
-  background-color: #000000;
-}}
+background-color: #000000;
 }
 }
-  .bg-primary {
-    --bs-bg-opacity: 0;
-.KItem{
-  width: 100%;
-  background-color: #000000;
-}}
+
 
 .rating span {
   margin: 0.1rem;
@@ -120,6 +154,7 @@ h1{
 }
 .carousel{
   margin-top: 21px;
+  background-color: #000000;
 }
 
 .list-group-item{
