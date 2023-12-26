@@ -12,10 +12,20 @@ a.NavInsta{
   text-align: center;
   padding: 0;
   margin: 0;
-
+  .bg-primary {
+    --bs-bg-opacity: 0;
+.KItem{
+  width: 100%;
+  background-color: #000000;
+}}
 }
 }
-
+  .bg-primary {
+    --bs-bg-opacity: 0;
+.KItem{
+  width: 100%;
+  background-color: #000000;
+}}
 
 .rating span {
   margin: 0.1rem;
