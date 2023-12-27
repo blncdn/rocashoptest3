@@ -24,7 +24,13 @@ const ImpressumScreen = () => {
             E-Mail: roca@blancdani.com<br></br>
             Telefon: Auf Anfrage<br></br><br></br><br></br>
             Umsatzsteuer:<br></br>
-            DE 350 284 467<br></br>
+            DE 350 284 467<br></br><br></br><br></br>
+            Plattform der EU-Kommission zur Online-Streitbeilegung
+            <br></br>
+https://ec.europa.eu/odr
+<br></br><br></br>
+
+Wir sind zur Teilnahme an einem Streitbeilegungsverfahren<br></br> vor einer Verbraucherschlichtungsstelle weder verpflichtet noch bereit.
         </h6>
       </Col>
     </Row>
