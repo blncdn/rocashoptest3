@@ -82,7 +82,7 @@ const ProductScreen = () => {
           <Meta title={product.name} description={product.description} />
           <Row>
 
-            <Carousel interval={null} pause='hover' className='bg-primary mb-4 PCarousel'>           
+            <Carousel indicators={false} interval={null} pause='hover' className='bg-primary mb-4 PCarousel'>           
               <Carousel.Item  class="KItem" key={product._id}>         
                 <Image src={product.image[0]} alt={product.name} fluid />         
               </Carousel.Item>
