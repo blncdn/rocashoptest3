@@ -48,12 +48,12 @@ const HomeScreen = () => {
               </Col>
             ))}
           </Row></Container>
-          <br></br><br></br><br></br>
+          <br></br><br></br>
           <Paginate 
             pages={data.pages}
             page={data.page}
             keyword={keyword ? keyword : ''}
-          /><br></br><br></br><br></br>
+          /><br></br><br></br>
         </>
       )}
     </>
