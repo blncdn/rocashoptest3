@@ -1,4 +1,4 @@
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Container } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { useGetProductsQuery } from '../slices/productsApiSlice';
 import { Link } from 'react-router-dom';
@@ -39,13 +39,15 @@ const HomeScreen = () => {
           <br></br>
           <br></br>
           <h1>Produkte</h1>
+          <Container>
           <Row>
+          
             {data.products.map((product) => (
-              <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
+              <Col key={product._id} xs={6} sm={6} md={4} lg={4} xl={3}>
                 <Product product={product} />
               </Col>
             ))}
-          </Row>
+          </Row></Container>
           <Paginate
             pages={data.pages}
             page={data.page}
@@ -58,3 +60,4 @@ const HomeScreen = () => {
 };
 
 export default HomeScreen;
+
