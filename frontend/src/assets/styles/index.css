@@ -145,6 +145,10 @@ navbar-toggler {
 }
 .card{
   background-color: #cfcfcf;
+  @media (max-width: 600px){
+    width: 13rem;
+
+  }
 }
 label.form-label{
   color: #ffffff;
