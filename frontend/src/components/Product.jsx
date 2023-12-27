@@ -49,7 +49,8 @@ const addToCartHandler = () => {
        
           <Button
                       className='btn-block'
-                      type='button'               
+                      type='button' 
+                      disabled={product.countInStock === 0} 
                       onClick={addToCartHandler}
                     >
                       Hinzufügen
