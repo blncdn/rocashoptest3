@@ -38,10 +38,12 @@ const HomeScreen = () => {
           <br></br>
           <br></br>
           <br></br>
-            <div style={{display:'flex', justifyContent:'space-between', height:'42px'}}>
+            <div style={{display:'flex', justifyContent:'space-between', height:'38px'}}>
               <h1 style={{paddingLeft:'10px'}}>Produkte</h1>
               <SearchBox/>
             </div>
+            <br></br>
+   
           <Container>
           <Row>
           
@@ -64,4 +66,3 @@ const HomeScreen = () => {
 };
 
 export default HomeScreen;
-
