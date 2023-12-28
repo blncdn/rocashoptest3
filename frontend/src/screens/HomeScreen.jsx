@@ -8,7 +8,7 @@ import Message from '../components/Message';
 import Paginate from '../components/Paginate';
 import ProductCarousel from '../components/ProductCarousel';
 import Meta from '../components/Meta';
-
+import SearchBox from '../components/SearchBox';
 const HomeScreen = () => {
   const { pageNumber, keyword } = useParams();
 
@@ -38,7 +38,10 @@ const HomeScreen = () => {
           <br></br>
           <br></br>
           <br></br>
-          <h1>Produkte</h1>
+            <div style={{display:'flex', justifyContent:'space-between', height:'42px'}}>
+              <h1 style={{paddingLeft:'10px'}}>Produkte</h1>
+              <SearchBox/>
+            </div>
           <Container>
           <Row>
           
@@ -48,12 +51,12 @@ const HomeScreen = () => {
               </Col>
             ))}
           </Row></Container>
-          <br></br><br></br>
+          <br></br><br></br><br></br>
           <Paginate 
             pages={data.pages}
             page={data.page}
             keyword={keyword ? keyword : ''}
-          /><br></br><br></br>
+          /><br></br><br></br><br></br>
         </>
       )}
     </>
