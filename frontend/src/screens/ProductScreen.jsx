@@ -89,9 +89,6 @@ const ProductScreen = () => {
        <Carousel.Item key={product._id}>         
          <Image src={product.image[1]} alt={product.name} fluid /> 
        </Carousel.Item>
-              <Carousel.Item key={product._id}>         
-         <Image src={product.image[2]} alt={product.name} fluid /> 
-       </Carousel.Item>
             </Carousel>
 
 
@@ -108,11 +105,11 @@ const ProductScreen = () => {
                 </ListGroup.Item>
                 <ListGroup.Item>Preis: €{product.price}</ListGroup.Item>
                 <ListGroup.Item>
-                  Beschreibung: {product.description}
+                  Beschreibung: {product.description} 
                 </ListGroup.Item>
               </ListGroup>
             </Col>
-            <Col md={3}>
+            <Col xxs={12} xs={12} sm={12} md={3}>
               <Card>
                 <ListGroup variant='flush'>
                   <ListGroup.Item>
@@ -200,11 +197,11 @@ const ProductScreen = () => {
                           onChange={(e) => setRating(e.target.value)}
                         >
                           <option value=''>Wähle...</option>
-                          <option value='1'>1 - Stern</option>
-                          <option value='2'>2 - Sterne</option>
-                          <option value='3'>3 - Sterne</option>
-                          <option value='4'>4 - Sterne</option>
-                          <option value='5'>5 - Sterne</option>
+                          <option value='1'>1 - Poor</option>
+                          <option value='2'>2 - Fair</option>
+                          <option value='3'>3 - Good</option>
+                          <option value='4'>4 - Very Good</option>
+                          <option value='5'>5 - Excellent</option>
                         </Form.Control>
                       </Form.Group>
                       <Form.Group className='my-2' controlId='comment'>
