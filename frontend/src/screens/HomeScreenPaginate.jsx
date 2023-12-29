@@ -6,10 +6,9 @@ import Product from '../components/Product';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import Paginate from '../components/Paginate';
-import ProductCarousel from '../components/ProductCarousel';
 import Meta from '../components/Meta';
 import SearchBox from '../components/SearchBox';
-const HomeScreen = () => {
+const HomeScreenPaginate = () => {
   const { pageNumber, keyword } = useParams();
 
   const { data, isLoading, error } = useGetProductsQuery({
@@ -59,4 +58,4 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default HomeScreenPaginate;
