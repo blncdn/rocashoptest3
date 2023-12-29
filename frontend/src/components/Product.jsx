@@ -51,8 +51,8 @@ const addToCartHandler = () => {
 
         <Card.Text as='h3'>€{product.price}</Card.Text>
        
-          <Button       style={{width:'100%',borderRadius:'0',borderColor:'#3c3655',
-                        backgroundColor:'#3c3655'}}
+          <Button       style={{width:'100%',borderRadius:'0',borderColor:'#22293f',
+                        backgroundColor:'#22293f'}}
                       className='btn-block'
                       type='button'  
                       disabled={product.countInStock === 0}             
