@@ -26,20 +26,24 @@ const addToCartHandler = () => {
 };
 
   return (
-    <Card className='my-2'>
-      <Link to={`/product/${product._id}`}>
-        <Card.Img src={product.image[0]} variant='top' />
-      </Link>
 
-      <Card.Body>
+  
+  
+  
+      
+    <Card style={{border:'none', borderRadius:'0'}} className='my-2'>
+      <Link to={`/product/${product._id}`}>
+        <Card.Img  alt='Card' className='imageSmall' src={product.image[0]} variant='top' />
+      </Link>
+      <Card.Body style={{padding:'0'}}>
         <Link to={`/product/${product._id}`}>
           <Card.Title as='div' className='product-title'>
             <strong>{product.name}</strong>
           </Card.Title>
         </Link>
-
         <Card.Text as='div'>
           <Rating
+          
             value={product.rating}
             text={`${product.numReviews} reviews`}
           />
@@ -47,11 +51,11 @@ const addToCartHandler = () => {
 
         <Card.Text as='h3'>€{product.price}</Card.Text>
        
-          <Button
-                      style={{width:'100%'}}
+          <Button       style={{width:'100%',borderRadius:'0',borderColor:'#3c3655',
+                        backgroundColor:'#3c3655'}}
                       className='btn-block'
-                      type='button' 
-                      disabled={product.countInStock === 0} 
+                      type='button'  
+                      disabled={product.countInStock === 0}             
                       onClick={addToCartHandler}
                     >
                       Hinzufügen
@@ -59,6 +63,8 @@ const addToCartHandler = () => {
                  
       </Card.Body>
     </Card>
+
+  
   );
 };
 
