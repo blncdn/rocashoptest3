@@ -32,8 +32,24 @@ a.NavInsta{
  display: flex;
  text-align: center;
  justify-content: center;
+ border-radius: 0;
 
 }
+.page-item:first-child .page-link{
+  border-radius: 0;
+}
+.page-link.active, .active > .page-link{
+  background-color: #000000;
+   border-radius: 0;
+ border: none;
+}
+.page-link{
+  background-color: #f3f3f3;
+  display: inline;
+}
+
+
+
 img.card-img-top{
   width: 100%;
   margin: 0;
@@ -199,4 +215,9 @@ ul.instLink{
 .carousel-control-next-icon{
   fill: black
 
+}
+
+.navbar-toggler-icon{
+  fill: white;
+  color: white;
 }
