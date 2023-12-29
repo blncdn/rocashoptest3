@@ -92,7 +92,7 @@ const ProductScreen = () => {
             </Carousel>
 
 
-            <Col md={3}>
+            <Col md={6}>
               <ListGroup variant='flush'>
                 <ListGroup.Item>
                   <h3>{product.name}</h3>
@@ -109,7 +109,7 @@ const ProductScreen = () => {
                 </ListGroup.Item>
               </ListGroup>
             </Col>
-            <Col xxs={12} xs={12} sm={12} md={3}>
+            <Col xxs={12} xs={12} sm={12} md={6} lg={3} xl={3}>
               <Card>
                 <ListGroup variant='flush'>
                   <ListGroup.Item>
