@@ -31,7 +31,7 @@ const SearchBox = () => {
         placeholder='Gold, Silber...'
         className='mr-sm-2 ml-sm-5'
       ></Form.Control>
-      <Button style={{fontSize:'12px'}} type='submit' variant='outline-light' className='p-2 mx-2'>
+      <Button style={{fontSize:'12px'}} type='submit' variant='outline-light' className='p-2 mx-2 searchbtn'>
         Suchen
       </Button>
     </Form>
