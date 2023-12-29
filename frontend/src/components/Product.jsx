@@ -26,7 +26,7 @@ const addToCartHandler = () => {
 };
 
   return (
-    <Card className='my-3'>
+    <Card className='my-2'>
       <Link to={`/product/${product._id}`}>
         <Card.Img src={product.image[0]} variant='top' />
       </Link>
@@ -48,6 +48,7 @@ const addToCartHandler = () => {
         <Card.Text as='h3'>€{product.price}</Card.Text>
        
           <Button
+                      style={{width:'100%'}}
                       className='btn-block'
                       type='button' 
                       disabled={product.countInStock === 0} 
