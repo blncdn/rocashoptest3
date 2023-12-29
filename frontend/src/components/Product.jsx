@@ -35,25 +35,26 @@ const addToCartHandler = () => {
       <Link to={`/product/${product._id}`}>
         <Card.Img  alt='Card' className='imageSmall' src={product.image[0]} variant='top' />
       </Link>
-      <Card.Body style={{padding:'0'}}>
-        <Link to={`/product/${product._id}`}>
-          <Card.Title as='div' className='product-title'>
-            <strong>{product.name}</strong>
+      <Card.Body style={{padding:'0px 0px 0px 0px'}} >
+        <Link style={{padding:'0px 0px 0px 0px'}} to={`/product/${product._id}`}>
+          <Card.Title style={{padding:'0px 0px 0px 0px', marginBottom:'0'}} as='div' className='product-title'>
+            <strong style={{padding:'0px 10px 0px 10px'}}>{product.name}</strong>
           </Card.Title>
         </Link>
-        <Card.Text as='div'>
+        <Card.Text style={{padding:'0px 10px 0px 10px'}}  as='div'>
           <Rating
-          
+            style={{padding:'0px 10px 0px 10px'}}
             value={product.rating}
             text={`${product.numReviews} reviews`}
           />
         </Card.Text>
 
-        <Card.Text as='h3'>€{product.price}</Card.Text>
+        <Card.Text style={{padding:'5px 10px 0px 10px'}}  as='h3'>€{product.price}</Card.Text>
        
-          <Button       style={{width:'100%',borderRadius:'0',borderColor:'#22293f',
-                        backgroundColor:'#22293f'}}
-                      className='btn-block'
+          <Button   style={{width:'100%',borderRadius:'0',borderColor:'#3c3655',
+                        backgroundColor:'#3c3655',}} hover={{backgroundColor: 'white'}}
+                       
+                      className='btn-block click'
                       type='button'  
                       disabled={product.countInStock === 0}             
                       onClick={addToCartHandler}
