@@ -30,6 +30,8 @@ import ProductEditScreen from './screens/admin/ProductEditScreen';
 import UserListScreen from './screens/admin/UserListScreen';
 import UserEditScreen from './screens/admin/UserEditScreen';
 import ImpressumScreen from './screens/ImpressumScreen';
+import HomeScreenPaginate from './screens/HomeScreenPaginate';
+
 
 import store from './store';
 import { Provider } from 'react-redux';
@@ -41,6 +43,7 @@ const router = createBrowserRouter(
       <Route index={true} path='/' element={<HomeScreen />} />
       <Route path='/search/:keyword' element={<HomeScreen />} />
       <Route path='/page/:pageNumber' element={<HomeScreen />} />
+    <Route path='/page/:pageNumber' element={<HomeScreenPaginate />} />
       <Route
         path='/search/:keyword/page/:pageNumber'
         element={<HomeScreen />}
