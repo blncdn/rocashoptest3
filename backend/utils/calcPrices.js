@@ -16,7 +16,7 @@ export function calcPrices(orderItems) {
   );
 
   // Calculate the shipping price
-  const shippingPrice = itemsPrice > 50 ? 0 : 0.1;
+  const shippingPrice = itemsPrice > 50 ? 0 : 0.10;
 
   // Calculate the tax price
   const taxPrice = 0.15 * itemsPrice;
