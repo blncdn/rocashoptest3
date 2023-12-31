@@ -51,8 +51,8 @@ const addToCartHandler = () => {
 
         <Card.Text style={{padding:'5px 10px 0px 10px'}}  as='h3'>€{product.price}</Card.Text>
        
-          <Button   style={{width:'100%',borderRadius:'0',borderColor:'#3c3655',
-                        backgroundColor:'#3c3655',}} hover={{backgroundColor: 'white'}}
+          <Button   style={{width:'100%',borderRadius:'0'
+                        }} hover={{backgroundColor: 'white'}}
                        
                       className='btn-block click'
                       type='button'  
