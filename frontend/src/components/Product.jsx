@@ -31,7 +31,7 @@ const addToCartHandler = () => {
   
   
       
-    <Card style={{border:'none', borderRadius:'0'}} className='my-2'>
+    <Card style={{border:'none', borderRadius:'0'}} className='my-2 card'>
       <Link to={`/product/${product._id}`}>
         <Card.Img  alt='Card' className='imageSmall' src={product.image[0]} variant='top' />
       </Link>
