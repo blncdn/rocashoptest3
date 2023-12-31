@@ -3,6 +3,8 @@ main {
   background: black;
   background-color: #000000;
   margin-top: 65px;
+
+
 }
 
 
@@ -70,6 +72,8 @@ img.card-img-top{
   margin: 0;
   padding: 0;
 }
+
+
 
 @media only screen and (min-width: 991px) {
   .PCarousel{
@@ -235,4 +239,14 @@ ul.instLink{
 .navbar-toggler-icon{
   fill: white;
   color: white;
+}
+
+button.click{
+  border: none;
+  background-color: #9104c9;
+  box-shadow: 0 0 5px #9104c9;
+}
+button.click:hover{
+  background-color: #b31fee;
+  box-shadow: 0 0 10px #b947e6, 0 0 20px #d675fc, 0 0 20px #cdb5ec inset;
 }
