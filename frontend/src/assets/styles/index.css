@@ -244,26 +244,31 @@ ul.instLink{
 
 
 
-.card.card{
-box-shadow: 0 0 5px #f2e1f8, 0 0 5px #f8f3fa, 0 0 5px #e9e2f1 inset;
+/* .card.card{
+  box-shadow: 0 0 10px #f6f5f7, 0 0 15px #c4c4c4, 0 0 15px #eae9eb inset;
 }
 .card.card:hover{
-  box-shadow: 0 0 10px #b947e6, 0 0 15px #d675fc, 0 0 15px #cdb5ec inset;
-  }
+  box-shadow: 0 0 10px #ffffff, 0 0 15px #f8f7f8, 0 0 15px #f3f1f5 inset;
+  } */
 
 
 button.click{
   border: none;
-  background-color: #9104c9;
-  box-shadow: 0 0 5px #9104c9;
+  background-color: #440f6e;
+  box-shadow: 0 0 5px #440f6e;
 }
 button.click:hover{
-  background-color: #b31fee;
-  box-shadow: 0 0 10px #b947e6, 0 0 20px #d675fc, 0 0 20px #cdb5ec inset;
+  background-color: #582185;
+  box-shadow: 0 0 5px #440f6e, 0 0 5px #440f6e, 0 0 5px #440f6e inset;
+  
 }
 button.click:hover:active{
-  background-color: #b31fee;
- 
+  background-color: #5e2b88;
+  box-shadow: 0 0 10px #5a2685, 0 0 10px #5a2685, 0 0 10px #5c2986 inset;
+}
+button.click:after{
+  background-color: #440f6e;
+  box-shadow: 0 0 5px #440f6e;
 }
 
 
