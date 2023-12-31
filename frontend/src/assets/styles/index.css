@@ -252,5 +252,5 @@ button.click:hover{
 }
 button.click:hover:active{
   background-color: #b31fee;
-  box-shadow: 0 0 10px #b947e6, 0 0 20px #d675fc, 0 0 20px #cdb5ec inset;
+  
 }
