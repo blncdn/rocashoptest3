@@ -92,7 +92,7 @@ const ProductScreen = () => {
             </Carousel>
 
 
-            <Col xxs={12} xs={12} sm={12} md={6} lg={6} xl={3}>
+            <Col xxs={12} xs={12} sm={12} md={6} lg={4} xl={3}>
               <ListGroup variant='flush'>
                 <ListGroup.Item>
                   <h3>{product.name}</h3>
