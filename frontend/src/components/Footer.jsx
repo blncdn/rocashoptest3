@@ -10,7 +10,7 @@ const Footer = () => {
           
           <Col className='text-center py-3'>
             <ul class="instLink">
-              <a href="/impressum">Impressum
+              <a href="/impressum" style={{color:'white' } }>Impressum
               </a>
             </ul> 
             <div style={{display:'flex', justifyContent:'center', marginBottom:'0px', }}>
