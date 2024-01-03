@@ -59,7 +59,7 @@ const addToCartHandler = () => {
                       disabled={product.countInStock === 0}             
                       onClick={addToCartHandler}
                     >
-                      Hinzufügen
+                      {product.countInStock > 0 ? 'Hinzufügen ' : 'Ausverkauft'}
                     </Button>
                  
       </Card.Body>
