@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Rating from './Rating';
 import { addToCart } from '../slices/cartSlice';
 import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 import {
   Row,
   Col,
@@ -22,7 +23,7 @@ const dispatch = useDispatch();
   const [qty, setQty] = useState(1);
 const addToCartHandler = () => {
   dispatch(addToCart({ ...product, qty }));
-  navigate('/cart');
+   toast.success('Artikel wurde hinzugefügt');
 };
 
   return (
