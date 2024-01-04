@@ -9,6 +9,8 @@ import { useRegisterMutation } from '../slices/usersApiSlice';
 import { setCredentials } from '../slices/authSlice';
 import { toast } from 'react-toastify';
 
+import {motion} from 'framer-motion'
+
 const RegisterScreen = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -25,6 +27,47 @@ const RegisterScreen = () => {
   const { search } = useLocation();
   const sp = new URLSearchParams(search);
   const redirect = sp.get('redirect') || '/';
+
+  const content = {
+    animate: {
+      transition: { staggerChildren: 0.1 },
+    },
+  };
+
+  const title = {
+    initial: { y: -20, opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.1,
+        ease: [0.6, -0.06, 0.01, 0.99],
+      },
+    },
+  };
+  const products = {
+    initial: { y: -20, opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.1,
+        ease: [0.6, -0.08, 0.01, 0.99],
+      },
+    },
+  };
+  const infoLogin = {
+    initial: { y: -20, opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.1,
+        ease: [0.6, -0.08, 0.01, 0.99],
+      },
+    },
+  };
+
 
   useEffect(() => {
     if (userInfo) {
@@ -49,43 +92,51 @@ const RegisterScreen = () => {
   };
 
   return (
+
+    <motion.section exit={{ opacity: 0 }}>
+      <motion.div
+        initial="initial"
+        animate="animate"
+        variants={content}
+      >
     <FormContainer>
-      <h1>Registrieren</h1>
+      <motion.h1 variants={title}>Registrieren</motion.h1>
+      <motion.section variants={products}> 
       <Form onSubmit={submitHandler}>
         <Form.Group className='my-2' controlId='name'>
-          <Form.Label>Name und Nachname</Form.Label>
+          <Form.Label>Name</Form.Label>
           <Form.Control
             type='name'
-            placeholder='Geben Sie Ihr Name ein'
+            placeholder='name'
             value={name}
             onChange={(e) => setName(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Form.Group className='my-2' controlId='email'>
-          <Form.Label>E-Mail Adresse</Form.Label>
+          <Form.Label>Email Adresse</Form.Label>
           <Form.Control
             type='email'
-            placeholder='Geben Sie Ihr E-mail ein'
+            placeholder='email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Form.Group className='my-2' controlId='password'>
-          <Form.Label>Passwort</Form.Label>
+          <Form.Label>Password</Form.Label>
           <Form.Control
             type='password'
-            placeholder='Geben Sie Ihr Passwort ein'
+            placeholder='password'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
         <Form.Group className='my-2' controlId='confirmPassword'>
-          <Form.Label>Wiederholen Sie Ihr Passwort</Form.Label>
+          <Form.Label>Wiederhole Password</Form.Label>
           <Form.Control
             type='password'
-            placeholder='Geben Sie Ihr Passwort nochmal ein'
+            placeholder='password'
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           ></Form.Control>
@@ -97,18 +148,23 @@ const RegisterScreen = () => {
 
         {isLoading && <Loader />}
       </Form>
-
+      </motion.section>
+      <motion.section variants={infoLogin}>
       <Row className='py-3'>
         <Col>
-          Bereits Registriert?{' '}
+          Schon da gewesen?{' '}
           <Link to={redirect ? `/login?redirect=${redirect}` : '/login'}>
             Anmelden
           </Link>
         </Col>
       </Row>
+      </motion.section>
     </FormContainer>
+    </motion.div>
+    </motion.section>
   );
 };
 
 export default RegisterScreen;
+
 
