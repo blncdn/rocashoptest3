@@ -50,7 +50,7 @@ const addToCartHandler = () => {
           />
         </Card.Text>
 
-        <Card.Text style={{padding:'5px 10px 0px 10px'}}  as='h3'> {product.countInStock > 0 ?  ${product.price}  : '-'} </Card.Text>
+        <Card.Text style={{padding:'5px 10px 0px 10px'}}  as='h3'> €{product.price} </Card.Text>
        
           <Button   style={{width:'100%',borderRadius:'0'
                         }} hover={{backgroundColor: 'white'}}
