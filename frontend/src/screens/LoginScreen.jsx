@@ -9,6 +9,8 @@ import { useLoginMutation } from '../slices/usersApiSlice';
 import { setCredentials } from '../slices/authSlice';
 import { toast } from 'react-toastify';
 
+import {motion} from 'framer-motion'
+
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -41,26 +43,72 @@ const LoginScreen = () => {
     }
   };
 
-  return (
-    <FormContainer>
-      <h1>Login</h1>
+  const content = {
+    animate: {
+      transition: { staggerChildren: 0.1 },
+    },
+  };
 
+  const title = {
+    initial: { y: -20, opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.1,
+        ease: [0.6, -0.06, 0.01, 0.99],
+      },
+    },
+  };
+  const products = {
+    initial: { y: -20, opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1.2,
+      transition: {
+        duration: 1.1,
+        ease: [0.6, -0.08, 0.01, 0.99],
+      },
+    },
+  };
+  const infoLogin = {
+    initial: { y: -20, opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1.5,
+      transition: {
+        duration: 1.1,
+        ease: [0.6, -0.08, 0.01, 0.99],
+      },
+    },
+  };
+
+  return (
+    <motion.section exit={{ opacity: 0 }}>
+      <motion.div
+        initial="initial"
+        animate="animate"
+        variants={content}
+      >
+    <FormContainer>
+      <motion.h1 variants={title}>Login</motion.h1>
+      <motion.section variants={products}> 
       <Form onSubmit={submitHandler}>
         <Form.Group className='my-2' controlId='email'>
-          <Form.Label>E-Mail</Form.Label>
+          <Form.Label>Email</Form.Label>
           <Form.Control
             type='email'
-            placeholder='Ihre E-Mail eingeben'
+            placeholder='email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Form.Group className='my-2' controlId='password'>
-          <Form.Label>Passwort</Form.Label>
+          <Form.Label>Password</Form.Label>
           <Form.Control
             type='password'
-            placeholder='Ihr Passwort eingeben'
+            placeholder='password'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
@@ -72,7 +120,8 @@ const LoginScreen = () => {
 
         {isLoading && <Loader />}
       </Form>
-
+    </motion.section>
+    <motion.section variants={infoLogin}>
       <Row className='py-3'>
         <Col>
           Neu hier?{' '}
@@ -81,7 +130,11 @@ const LoginScreen = () => {
           </Link>
         </Col>
       </Row>
+
+</motion.section>
     </FormContainer>
+    </motion.div>
+    </motion.section>
   );
 };
 
