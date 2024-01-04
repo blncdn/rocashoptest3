@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { motion } from "framer-motion";
 
 const SearchBox = () => {
   const navigate = useNavigate();
@@ -19,8 +20,21 @@ const SearchBox = () => {
       navigate('/');
     }
   };
+   
+  const searchBox = {
+    initial: { y: -20, opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        ease: [0.6, -0.06, 0.01, 0.99],
+      },
+    },
+  };
 
-  return (
+  return ( 
+    <motion.section variants={searchBox}>  
     <Form onSubmit={submitHandler} className='d-flex'>
       <Form.Control
       style={{fontSize:'13px'}}
@@ -35,6 +49,7 @@ const SearchBox = () => {
         Suchen
       </Button>
     </Form>
+    </motion.section>
   );
 };
 
