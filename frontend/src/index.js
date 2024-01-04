@@ -31,23 +31,23 @@ import UserListScreen from './screens/admin/UserListScreen';
 import UserEditScreen from './screens/admin/UserEditScreen';
 import ImpressumScreen from './screens/ImpressumScreen';
 import HomeScreenPaginate from './screens/HomeScreenPaginate';
-
-
+import { AnimatePresence } from "framer-motion";
 import store from './store';
 import { Provider } from 'react-redux';
 import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<App />}>
-      <Route index={true} path='/' element={<HomeScreen />} />
+    // <AnimatePresence>
+    <Route path='/' element={<App />}>     
+      <Route index={true} path='/' element={<HomeScreen />} />       
       <Route path='/search/:keyword' element={<HomeScreen />} />
-      <Route path='/page/:pageNumber' element={<HomeScreenPaginate/>} />
-    
+      <Route path='/page/:pageNumber' element={<HomeScreenPaginate />} />
       <Route
         path='/search/:keyword/page/:pageNumber'
         element={<HomeScreen />}
       />
+      <Route path='/category/:category' element={<HomeScreen />} />
       <Route path='/product/:id' element={<ProductScreen />} />
       <Route path='/cart' element={<CartScreen />} />
       <Route path='/login' element={<LoginScreen />} />
@@ -74,20 +74,21 @@ const router = createBrowserRouter(
         <Route path='/admin/user/:id/edit' element={<UserEditScreen />} />
       </Route>
     </Route>
+    // </AnimatePresence>
   )
 );
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <HelmetProvider>
       <Provider store={store}>
         <PayPalScriptProvider deferLoading={true}>
+        <AnimatePresence>
           <RouterProvider router={router} />
+          </AnimatePresence>
         </PayPalScriptProvider>
       </Provider>
     </HelmetProvider>
   </React.StrictMode>
 );
-
 reportWebVitals();
