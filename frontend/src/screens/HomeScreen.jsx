@@ -25,7 +25,7 @@ const HomeScreen = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 1.4,
+        duration: 1.1,
         ease: [0.6, -0.05, 0.01, 0.99],
       },
     },
@@ -36,7 +36,7 @@ const HomeScreen = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 1.4,
+        duration: 1.1,
         ease: [0.6, -0.06, 0.01, 0.99],
       },
     },
@@ -47,7 +47,7 @@ const HomeScreen = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 1.4,
+        duration: 1.1,
         ease: [0.6, -0.08, 0.01, 0.99],
       },
     },
