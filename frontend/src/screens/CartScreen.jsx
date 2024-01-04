@@ -12,6 +12,7 @@ import {
 import { FaTrash } from 'react-icons/fa';
 import Message from '../components/Message';
 import { addToCart, removeFromCart } from '../slices/cartSlice';
+import {motion} from 'framer-motion'
 
 const CartScreen = () => {
   const navigate = useNavigate();
@@ -34,17 +35,56 @@ const CartScreen = () => {
     navigate('/login?redirect=/shipping');
   };
 
+  const content = {
+    animate: {
+      transition: { staggerChildren: 0.1 },
+    },
+  };
+
+  const title = {
+    initial: { y: -20, opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1.4,
+      transition: {
+        duration: 1.4,
+        ease: [0.6, -0.06, 0.01, 0.99],
+      },
+    },
+  };
+  const products = {
+    initial: { y: -20, opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1.4,
+      transition: {
+        duration: 1.4,
+        ease: [0.6, -0.06, 0.01, 0.99],
+      },
+    },
+  };
+
   return (
+    <motion.section exit={{ opacity: 0 }}>
+      <motion.div
+        initial="initial"
+        animate="animate"
+        variants={content}
+      >
     <Row>
       <Col md={8}>
-        <h1 style={{ marginBottom: '20px' }}>Warenkorb</h1>
+        <motion.h1 variants={title} style={{ marginBottom: '20px' }}>Warenkorb</motion.h1>
         {cartItems.length === 0 ? (
+          <motion.div variants={title}>
           <Message>
             Ihr Warenkorb ist leer <Link to='/'>Zurück</Link>
           </Message>
+          </motion.div>
         ) : (
+        <motion.section variants={products}>  
           <ListGroup variant='flush'>
             {cartItems.map((item) => (
+               
               <ListGroup.Item key={item._id}>
                 <Row>
                   <Col md={2}>
@@ -81,6 +121,7 @@ const CartScreen = () => {
                       type='button'
                       variant='light'
                       onClick={() => removeFromCartHandler(item._id)}
+                      
                     >
                       <FaTrash />
                     </Button>
@@ -89,9 +130,12 @@ const CartScreen = () => {
               </ListGroup.Item>
             ))}
           </ListGroup>
+           </motion.section>
         )}
       </Col>
+      
       <Col md={4}>
+        <motion.section variants={products}> 
         <Card>
           <ListGroup variant='flush'>
             <ListGroup.Item>
@@ -115,9 +159,12 @@ const CartScreen = () => {
               </Button>
             </ListGroup.Item>
           </ListGroup>
-        </Card>
+        </Card></motion.section>
       </Col>
+      
     </Row>
+    </motion.div>
+    </motion.section>
   );
 };
 
