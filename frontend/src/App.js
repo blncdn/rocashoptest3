@@ -6,13 +6,12 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import { logout } from './slices/authSlice';
 import ScrollToTop from "./scrollToTop";
-
+import { AnimatePresence } from "framer-motion";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   const dispatch = useDispatch();
-
   useEffect(() => {
     const expirationTime = localStorage.getItem('expirationTime');
     if (expirationTime) {
@@ -23,21 +22,20 @@ const App = () => {
       }
     }
   }, [dispatch]);
-
   return (
     <>
       <ToastContainer />
-      <Header />
-      <main className='py-3'>
-        <Container>
-        <ScrollToTop />
-          <Outlet />
-        </Container>
-      </main>
+      <Header />     
+        <main className='py-3'>
+          <AnimatePresence mode='wait'>
+            <Container>         
+              <ScrollToTop />
+              <Outlet/>
+            </Container> 
+          </AnimatePresence>
+        </main>    
       <Footer />
     </>
   );
 };
-
 export default App;
-
