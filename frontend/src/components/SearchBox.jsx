@@ -34,7 +34,7 @@ const SearchBox = () => {
   };
 
   return ( 
-    <motion.section variants={searchBox}>  
+    <motion.section variants={searchBox} style={{width: '250px'}}>  
     <Form onSubmit={submitHandler} className='d-flex'>
       <Form.Control
       style={{fontSize:'13px'}}
