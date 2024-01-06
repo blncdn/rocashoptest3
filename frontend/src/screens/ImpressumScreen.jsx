@@ -15,7 +15,7 @@ const ImpressumScreen = () => {
             
         </h4><br></br><br></br><br></br>
         <h6>
-            Grigori Gluschtschenko<br></br><br></br>
+            Grischa Gluschenko<br></br><br></br>
             Hebelstrasse 1a <br></br>
             79379 Müllheim Baden<br></br><br></br>
 
