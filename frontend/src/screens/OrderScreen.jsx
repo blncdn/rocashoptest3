@@ -128,7 +128,7 @@ const OrderScreen = () => {
               </p>
               {order.isDelivered ? (
                 <Message variant='success'>
-                  Versendet an {order.deliveredAt}
+                  Versendet {order.deliveredAt}
                 </Message>
               ) : (
                 <Message variant='danger'>Nicht Versendet</Message>
