@@ -13,7 +13,7 @@ const ImpressumScreen = () => {
         <h4>
             IMPRESSUM
             
-        </h4><br></br><br></br><br></br>
+        </h4><br></br><br></br><br></br><br></br>
         <h6>
             Grischa Gluschenko<br></br><br></br>
             Hebelstrasse 1a <br></br>
